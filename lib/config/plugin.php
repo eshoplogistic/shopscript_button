@@ -5,7 +5,7 @@ return array(
     'description' => "Оформить быстрый заказ",
     'vendor' => 'eshoplogistic',
     'version' => '1.0',
-    'img'=>'img/plugin.png',
+    'img'=>'img/icon.png',
     'frontend' => true,
     'shop_settings' => true,
     'handlers' => array(
