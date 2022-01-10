@@ -1,0 +1,14 @@
+{strip}
+<script src="{$shopEslbuttonPathJS}eshoplogistic.js"></script>
+<link rel="stylesheet" type="text/css" href="{$shopEslbuttonPathCSS}style.css" />
+{if isset($sku_features_selectable)}{$skuFeatures['skuFeatures'] = $sku_features_selectable}{else}{$skuFeatures['skuFeatures'] = array()}{/if}
+
+{literal}
+<script>
+    $(function(){
+        window.shopEslbuttonInit = new eslbutton({/literal}{$eslbutton_init|json_encode},{$product->data|json_encode},{$skuFeatures|json_encode}{literal});
+    })
+</script>
+{/literal}
+
+{/strip}

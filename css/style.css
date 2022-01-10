@@ -1,0 +1,33 @@
+.esl-button_modal{
+    margin-top: 15px;
+}
+.esl-button_static{
+    margin-top: 25px;
+}
+
+#eShopLogisticStatic{
+    margin-top: 25px;
+}
+
+#eShopLogisticStatic .app-container{
+    z-index: 10;
+}
+
+#eShopLogisticStatic li {
+    list-style-type: none !important;
+}
+
+#eShopLogisticStatic li:hover {
+    cursor: pointer !important;
+    background-color: rgb(232, 232, 232) !important;
+}
+
+
+#eShopLogisticApp li {
+    list-style-type: none !important;
+}
+
+#eShopLogisticApp li:hover {
+    cursor: pointer !important;
+    background-color: rgb(232, 232, 232) !important;
+}

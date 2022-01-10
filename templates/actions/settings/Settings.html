@@ -1,0 +1,58 @@
+<script src="{$shop_plugin_url}js/settings.js" ></script>
+<link rel="stylesheet" type="text/css" href="{$shop_plugin_url}css/settings.css" />
+
+
+<h1>{$plugin_info.name}</h1>
+
+<div class="shop-esl-main">
+
+    <form action="?module=plugins&id={$plugin_id}&action=save" method="post" class="shop-esl-form" enctype="multipart/form-data">
+
+        {$wa->csrf()}
+
+        <div class="field">
+            <div class="name">
+                <label>Ключ виджета</label>
+            </div>
+            <div class="value">
+                <input type="text" name="shop_eslbutton_defines[widgetkey]" value="{$defines.widgetkey|escape}" />
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="name">
+                <label>Секретный код виджета</label>
+            </div>
+            <div class="value">
+                <input type="text" name="shop_eslbutton_defines[widgetsecret]" value="{$defines.widgetsecret|escape}" />
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="name">
+                <label>Вид виджета</label>
+            </div>
+            <div class="value">
+                <input type="radio" name="shop_eslbutton_defines[widgettype]" value="modal" {if isset($defines.widgettype) && $defines.widgettype == "modal"}checked{/if}/> <label>Модальный</label>
+                <input type="radio" name="shop_eslbutton_defines[widgettype]" value="static" {if isset($defines.widgettype) && $defines.widgettype == "static"}checked{/if}/> <label>Статический</label>
+            </div>
+        </div>
+
+        <div class="field shop-esl-form__save">
+            <div class="value submit">
+                <input type="submit" class="button green" value="Сохранить">
+                <span class="shop-esl-form__status js-esl-form-status" style="display:none"></span>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+    var shopEslbuttonPluginSettingsInit = new shopEslbuttonPluginSettings({$shop_plugin_config|json_encode});
+</script>
+
+
+
+
